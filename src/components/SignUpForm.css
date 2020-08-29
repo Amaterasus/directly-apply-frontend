@@ -1,0 +1,22 @@
+
+div .signupbox{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(228, 227, 227);
+    max-width: 30vw;
+    min-height: 50vh;
+    border-style: groove;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+.signupform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 30vw;
+}
