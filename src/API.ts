@@ -1,4 +1,4 @@
-const BASE_URL: string = "https://directlyapply.herokuapp.com/"
+const BASE_URL: string = "http://localhost:5000/"
 const WAKE_UP_URL: string = BASE_URL + "wakeup"
 const AUTH_URL: string = BASE_URL + "authorised"
 const SIGN_UP_URL: string = BASE_URL + "signup"

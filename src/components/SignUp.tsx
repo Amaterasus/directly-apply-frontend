@@ -16,13 +16,13 @@ const SignUp: FC<SignUpProps> = ({login}) => {
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [foundUs, setFoundUs] = useState("");
   const [sendJobMatches, setSendJobMatches] = useState(false);
-  const [agreeToTerms, setAgreeToTerms] = useState(false);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     const data = {
-      name, email, phoneNumber, password, passwordConfirmation, foundUs, sendJobMatches, agreeToTerms
+      name, email, phoneNumber, password, passwordConfirmation, foundUs, sendJobMatches, agreedToTerms
     }
 
     signUp(data).then(user => login(user))
@@ -80,7 +80,7 @@ const SignUp: FC<SignUpProps> = ({login}) => {
               </select>
               <input checked={sendJobMatches} onChange={e => setSendJobMatches(!sendJobMatches)} name="sendJobMatches" type="checkbox"/>
               <label>Would you like us to send you curated job matches?</label>
-              <input checked={agreeToTerms}  onChange={e => setAgreeToTerms(!agreeToTerms)} name="agreeToTerms" type="checkbox"/>
+              <input checked={agreedToTerms}  onChange={e => setAgreedToTerms(!agreedToTerms)} name="agreeToTerms" type="checkbox"/>
               <label>Do you agree to our terms of service & privacy policy?</label>
               <button>Sign Up</button>
           </form>
