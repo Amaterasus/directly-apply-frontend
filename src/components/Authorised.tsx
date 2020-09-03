@@ -3,18 +3,15 @@ import { Route, Switch, Redirect, Link } from "react-router-dom";
 import LoggedIn from "./LoggedIn"
 
 interface AuthorisedProps {
-  signOut: Function
+  user: User
 }
 
-export const Authorised: FC<AuthorisedProps> = ({signOut}) => {
+export const Authorised: FC<AuthorisedProps> = ({user}) => {
   return (
       <div>
-        <Link to="login">
-            <button onClick={() => signOut()}>Sign out</button>
-        </Link>
         <Switch>
             <Route exact path="/loggedin">
-                <LoggedIn />
+                <LoggedIn user={user}/>
             </Route>
             <Redirect to="/loggedin" />
         </Switch>

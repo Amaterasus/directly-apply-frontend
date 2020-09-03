@@ -3,9 +3,11 @@ div .signupbox{
     display: flex;
     flex-direction: column;
     background-color: rgb(228, 227, 227);
-    max-width: 30vw;
+    min-width: 200px;
     min-height: 50vh;
     border-style: groove;
+    margin-top: 80px; 
+    margin-bottom: 30px; 
 }
 
 .content {
@@ -18,5 +20,5 @@ div .signupbox{
     justify-content: center;
     align-content: center;
     align-items: center;
-    max-width: 30vw;
+    min-width: 175px;
 }

@@ -10,6 +10,10 @@ header {
   background-color: #fa5d54;
   min-height: 7vh;
   display: flex;
+  align-items: right;
+  overflow: hidden;
+  position: fixed;
+  width: 100%
 }
 
 footer {
@@ -27,4 +31,16 @@ a {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.signOut {
+  float: right;
+}
+
+.warning {
+  color: red;
+}
+
+.loggedIn {
+  margin: 20px; 
 }

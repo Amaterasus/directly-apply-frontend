@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
 import SignUp from "./SignUp"
 
-const Unauthorised = () => {
+interface UnauthorisedProps {
+  login: Function
+}
+
+const Unauthorised: FC<UnauthorisedProps> = ({login}) => {
   return (
       <div>
         <Switch>
             <Route exact path="/signup">
-                <SignUp />
+                <SignUp login={login} />
             </Route>
             <Redirect to="/signup" />
         </Switch>
